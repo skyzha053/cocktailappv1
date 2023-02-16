@@ -1,39 +1,44 @@
 import React from 'react';
-import './recept.css'
 import { useLocation } from 'react-router-dom';
+import './recept.css';
 import Footerlogin from "../../components/Footerlogin/Footerlogin";
 
 function Recept() {
     const location = useLocation();
     const queryParams = new URLSearchParams(location.search);
+
     const name = queryParams.get('name');
     const instructions = queryParams.get('instructions');
-    const strDrinkThumb = queryParams.get('strDrinkThumb');
-    const ingredients = [];
+    const thumbnail = queryParams.get('strDrinkThumb');
 
-    let i = 1;
-    while (queryParams.get(`ingredient${i}`)) {
-        ingredients.push(queryParams.get(`ingredient${i}`));
-        i++;
+    const ingredients = [];
+    for (let i = 1; i <= 15; i++) {
+        const ingredient = queryParams.get(`ingredient${i}`);
+        if (ingredient) {
+            ingredients.push(ingredient);
+        }
     }
 
     return (
-        <div className="recepten-container">
-            <div className="recepten-content">
-                <div className="recepten-ingredients">
-                    <h3>Ingredients</h3>
+        <div className="recept">
+            <div className="recept-header">
+                <h1>{name}</h1>
+            </div>
+            <div className="recept-content">
+                <div className="recept-ingredients">
+                    <h2>Ingredients:</h2>
                     <ul>
                         {ingredients.map((ingredient, index) => (
                             <li key={index}>{ingredient}</li>
                         ))}
                     </ul>
                 </div>
-                <div className="recepten-instructions">
-                    <h2>{name}</h2>
+                <div className="recept-instructions">
+                    <h2>Instructions:</h2>
                     <p>{instructions}</p>
                 </div>
-                <div className="recepten-image">
-                    <img src={strDrinkThumb} alt={name} />
+                <div className="recept-image">
+                    <img src={thumbnail} alt={name} />
                 </div>
             </div>
             <Footerlogin />
