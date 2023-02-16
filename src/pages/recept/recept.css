@@ -9,7 +9,7 @@
 
 .recept-header {
     margin: 0;
-    padding: 0;
+    padding: 0 20px;
 }
 
 .recept-content {
@@ -19,7 +19,7 @@
 
 .recept-ingredients {
     flex-basis: 30%;
-    padding-right: 1em;
+    padding: 0 20px;
 }
 
 .recept-instructions {
@@ -28,6 +28,7 @@
 }
 
 .recept-image {
+    padding: 0 20px;
     flex-basis: 30%;
 }
 
