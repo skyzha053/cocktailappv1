@@ -1,0 +1,13 @@
+body{
+    background-color: black;
+}
+.mainmenu{
+    background-color: black;
+    color:white;
+    height:100%;
+}
+
+img{
+    width:20vh;
+    height: 20vh;
+}
