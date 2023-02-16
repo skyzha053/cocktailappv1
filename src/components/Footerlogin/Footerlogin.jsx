@@ -13,7 +13,7 @@ const Footerlogin = () => (
                 <Link class= "d-inline-flex justify-content-center" to="/Favorieten">Favorieten</Link>
             </div>
             <div class="links-to-logout d-inline-flex justify-content-center">
-                <links class='links-to-logout-1 d-inline-flex justify-content-center' to="/Logout">log uit</links>
+                <Link class='links-to-logout-1 d-inline-flex justify-content-center' to="/">log uit</Link>
             </div>
 
         </Container>
