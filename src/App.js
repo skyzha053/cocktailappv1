@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css'
-import {Routes, BrowserRouter, Route } from 'react-router-dom'
+import {Routes, Route } from 'react-router-dom'
 import loginPage from './pages/login/login'
 import Navbar from "./components/Navbar/Navbar";
 import FooterLogin from "./components/Footerlogin/Footerlogin";
