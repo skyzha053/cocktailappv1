@@ -1,0 +1,81 @@
+.forget-password{
+    background-color: black;
+    color:  white;
+    height: 100vh;
+}
+
+.container-form{
+    border: solid;
+    border-color: white;
+    height: 80vh;
+    width: 90vh;
+}
+
+img{
+    height: 20vh;
+    width: 40vh;
+}
+
+.container-form-1{
+    width: 35vh;
+    height: 15vh;
+    text-align: center;
+    font-size: 13px;
+}
+.text-forget{
+    font-weight: bold;
+    height: 10vh;
+    width: 60%;
+}
+
+.text-forget-1{
+    color: #6C6C6C;
+    font-weight: bold;
+    height: 50%;
+    font-size: 13px;
+}
+.button1{
+    margin-top: 10px;
+}
+.button2{
+    width: 35%;
+    font-weight: bold;
+    font-size: 15px;
+}
+.of-text{
+    margin-top: 10px;
+}
+.left-divider{
+    height: 2px;
+    width: 27%;
+    background-color: #6C6C6C;
+
+}
+
+.right-divider{
+    height: 2px;
+    width: 27%;
+    background-color: #6C6C6C;
+}
+
+.link{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.divider{
+    background-color: white;
+    height: 2px;
+    width: 100%;
+    margin-top: 5vh;
+}
+
+.link-1{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 15px;
+}

@@ -1,0 +1,52 @@
+body{
+    background-color:black ;
+}
+.login-page{
+    color: white;
+}
+.font-login{
+    font-weight: bold;
+}
+.login-page a{
+    text-decoration: none;
+    color: white;
+}
+
+.login-page{
+    height: 100vh;
+    background-color: black;
+}
+
+.text-part{
+    margin-top: 100px;
+    height: 50vh;
+    width: 50%;
+    font-weight: bold;
+}
+.login-button{
+    border-radius: 5px;
+    width: 40%;
+    font-weight: bold;
+}
+
+text-part-2{
+    height: 100%;
+    width: 50%;
+}
+
+.logo{
+    height: 100%;
+    width: 100%;
+}
+.password-color{
+    color: #6C6C6C;
+    margin-top: 10px;
+}
+
+.text-part-3{
+    margin-top: 20px;
+}
+
+.username-color{
+    color: #6C6C6C;
+}

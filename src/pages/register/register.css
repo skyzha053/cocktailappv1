@@ -1,0 +1,60 @@
+body{
+    background-color: white;
+}
+
+.register-form {
+    background-color:black ;
+    height: 100vh;
+    color: white;
+    font-weight: bold;
+
+}
+
+.register-form-0{
+    border:solid;
+    color:grey;
+    height:70%;
+    width: 70%;
+
+}
+
+.register-form-1 {
+    margin-top: 100px;
+    width: 100%;
+}
+.first-name-label, .last-name-label, .email-label{
+    margin-left:10% ;
+}
+
+.first-name-input, .last-name-input, .email-input{
+    width: 35%;
+    margin-left:10% ;
+}
+
+.username-label{
+    margin-right: 31%;
+}
+
+.password-label{
+    margin-right: 34%;
+}
+
+.password-label-1{
+    margin-right: 27%;
+}
+
+.username-input, .password-input{
+    width: 35%;
+    margin-right: 10%;
+}
+
+.btn-cancel-register{
+    margin-top: 20px;
+    margin-left: 55%;
+    margin-right: 10%;
+
+}
+
+.btn{
+    font-weight: bold;
+}

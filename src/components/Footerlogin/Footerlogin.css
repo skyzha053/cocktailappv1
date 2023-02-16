@@ -1,0 +1,43 @@
+.footer{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    background-color: black;
+    text-align: center;
+    color: white;
+}
+
+.links-to-middle{
+    margin-top: 5vh;
+    width: 70%;
+    margin-left: 33vh;
+
+
+}
+
+
+.footer a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.links-to-middle a {
+    margin: 0 10px;
+}
+
+.links-to-logout{
+    margin-top: 5vh;
+    font-weight: bold;
+
+
+
+
+}
+
+
+.footer-logo img{
+    width: 190px;
+    height: 100%;
+
+}
