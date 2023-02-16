@@ -1,7 +1,7 @@
 import React from 'react';
-import './recept.css';
+import './recept.css'
 import { useLocation } from 'react-router-dom';
-import Footerlogin from '../../components/Footerlogin/Footerlogin';
+import Footerlogin from "../../components/Footerlogin/Footerlogin";
 
 function Recept() {
     const location = useLocation();
@@ -20,21 +20,23 @@ function Recept() {
     return (
         <div className="recepten-container">
             <div className="recepten-content">
-                <h2>{name}</h2>
-                <p>{instructions}</p>
-                <h3>Ingredients</h3>
-                <ul>
-                    {ingredients.map((ingredient, index) => (
-                        <li key={index}>{ingredient}</li>
-                    ))}
-                </ul>
+                <div className="recepten-ingredients">
+                    <h3>Ingredients</h3>
+                    <ul>
+                        {ingredients.map((ingredient, index) => (
+                            <li key={index}>{ingredient}</li>
+                        ))}
+                    </ul>
+                </div>
+                <div className="recepten-instructions">
+                    <h2>{name}</h2>
+                    <p>{instructions}</p>
+                </div>
+                <div className="recepten-image">
+                    <img src={strDrinkThumb} alt={name} />
+                </div>
             </div>
-            <div className="recepten-image">
-                <img src={strDrinkThumb} alt={name} />
-            </div>
-            <div className="footer-container">
-                <Footerlogin />
-            </div>
+            <Footerlogin />
         </div>
     );
 }

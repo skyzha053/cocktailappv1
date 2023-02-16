@@ -1,35 +1,53 @@
 .recepten-container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    height:70vh;
     background-color: black;
     color: white;
-    padding: 3rem;
     font-weight: bold;
 }
 
 .recepten-content {
-    width: 50%;
-    padding-right: 1rem;
+    display: flex;
+
+}
+
+.recepten-ingredients {
+    flex-basis: 30%;
+    padding: 1em;
+}
+
+.recepten-instructions {
+    padding: 1em;
 }
 
 .recepten-image {
-    width: 50%;
-    display: flex;
-    justify-content: center;
+    flex-basis: 30%;
+    padding: 1em;
 }
 
 .recepten-image img {
-    width: 60%;
-    height: 60%;
-}
-
-
-.footer-container {
-    position: fixed;
-    bottom: 0;
-    left: 0;
     width: 100%;
-    z-index: 100;
+    height: auto;
 }
+
+.recepten-content h2 {
+    margin-top: 0;
+}
+
+.recepten-content h3 {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+.recepten-content ul {
+    margin-top: 0;
+    margin-bottom: 1em;
+    padding-left: 0;
+}
+
+.recepten-content li {
+    list-style: none;
+    margin-bottom: 0.5em;
+}
+
