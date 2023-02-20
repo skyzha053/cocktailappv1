@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 function MainMenu() {
     const [imageURLs, setImageURLs] = useState([]);
     const [cocktailId, setCocktails] = useState([]);
-    const [cocktailNames, setCocktailNames] = useState([])
+    const [cocktailNames, setCocktailNames] = useState([]);
 
     const handleClick = (id) => {
         axios.get(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`)
@@ -42,6 +42,7 @@ function MainMenu() {
                 console.log(error);
             });
     }
+
     const getRandomCocktails = () => {
         Promise.all([
             axios.get('https://www.thecocktaildb.com/api/json/v1/1/random.php'),
@@ -59,50 +60,9 @@ function MainMenu() {
         });
     }
 
-    const [imageURLIconic, setImageURLsIconic] = useState([]);
-    const [cocktailIdIconic, setCocktailsIconic] = useState([]);
-    const [cocktailNameIconic, setCocktailNamesIconic] = useState([]);
-    const getIconic = () =>{
-        Promise.all([
-            axios.get('https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11117'),
-            axios.get('https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11009'),
-            axios.get('https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=178357'),
-            axios.get('https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11002')
-        ]).then(responses => {
-            const cocktails = responses.map(response => response.data.drinks[0]);
-            setImageURLsIconic(cocktails.map(cocktail => cocktail.strDrinkThumb));
-            setCocktailsIconic(cocktails.map(cocktail => cocktail.idDrink));
-            setCocktailNamesIconic(cocktails.map(cocktail => cocktail.strDrink))
-        }).catch(error => {
-            console.log(error);
-        });
-
-    }
-
-    const [imageURLClassics, setImageURLsClassics] = useState([]);
-    const [cocktailIdClassics, setCocktailsClassics] = useState([]);
-    const [cocktailNameClassics, setCocktailNamesClassics] = useState([]);
-    const getClassics = () =>{
-        Promise.all([
-            axios.get('https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11000'),
-            axios.get('https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11202'),
-            axios.get('https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=178325'),
-            axios.get('https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=17212')
-        ]).then(responses => {
-            const cocktails = responses.map(response => response.data.drinks[0]);
-            setImageURLsClassics(cocktails.map(cocktail => cocktail.strDrinkThumb));
-            setCocktailsClassics(cocktails.map(cocktail => cocktail.idDrink));
-            setCocktailNamesClassics(cocktails.map(cocktail => cocktail.strDrink))
-        }).catch(error => {
-            console.log(error);
-        });
-
-    }
 
     useEffect(() => {
         getRandomCocktails();
-        getIconic()
-        getClassics()
     }, []);
 
     return (
@@ -151,90 +111,73 @@ function MainMenu() {
                     <p>{cocktailNames[4]}</p>
                 </div>
             </div>
-
-            <div className="container-classic">
+            <div className="container-other"></div>
+            <div className="container-newest">
                 <div>
-                    <h2 className="title-classic">Classic cocktails</h2>
+                    <h2 className="title-newest">Latest</h2>
                 </div>
                 <div className="images-row">
                     <div className="image">
-                        <Link to={`/recept?id=${cocktailIdClassics[0]}`}>
-                            <img src={imageURLClassics[0]} alt="Cocktail" onClick={() => handleClick(cocktailIdClassics[0])} />
-                        </Link>
-                        <div className="cocktail-name-classic-iconic">
-                            <p>{cocktailNameClassics[0]}</p>
-                        </div>
+                        <img src="image5.jpg" alt="Image 5" />
                     </div>
                     <div className="image">
-                        <Link to={`/recept?id=${cocktailIdClassics[1]}`}>
-                            <img src={imageURLClassics[1]} alt="Cocktail" onClick={() => handleClick(cocktailIdClassics[1])} />
-                        </Link>
-                        <div className="cocktail-name-classic-iconic">
-                            <p>{cocktailNameClassics[1]}</p>
-                        </div>
+                        <img src="image6.jpg" alt="Image 6" />
                     </div>
                 </div>
                 <div className="images-row">
                     <div className="image">
-                        <Link to={`/recept?id=${cocktailIdClassics[2]}`}>
-                            <img src={imageURLClassics[2]} alt="Cocktail" onClick={() => handleClick(cocktailIdClassics[2])} />
-                        </Link>
-                        <div className="cocktail-name-classic-iconic">
-                            <p>{cocktailNameClassics[2]}</p>
-                        </div>
+                        <img src="image7.jpg" alt="Image 7" />
                     </div>
                     <div className="image">
-                        <Link to={`/recept?id=${cocktailIdClassics[3]}`}>
-                            <img src={imageURLClassics[3]} alt="Cocktail" onClick={() => handleClick(cocktailIdClassics[3])} />
-                        </Link>
-                        <div className="cocktail-name-classic-iconic">
-                            <p>{cocktailNameClassics[3]}</p>
-                        </div>
+                        <img src="image8.jpg" alt="Image 8" />
                     </div>
                 </div>
             </div>
-
+            <div className="container-basis">
+                <div>
+                    <h2 className="title-basis">Op basis van</h2>
+                </div>
+                <div className="images-row">
+                    <div className="image">
+                        <img src="image1.jpg" alt="Image 1" />
+                    </div>
+                    <div className="image">
+                        <img src="image2.jpg" alt="Image 2" />
+                    </div>
+                </div>
+                <div className="images-row">
+                    <div className="image">
+                        <img src="image3.jpg" alt="Image 3" />
+                    </div>
+                    <div className="image">
+                        <img src="image4.jpg" alt="Image 4" />
+                    </div>
+                </div>
+            </div>
             <div className="container-iconic">
                 <div>
                     <h2 className="title-iconic">Iconische cocktails</h2>
                 </div>
                 <div className="images-row">
                     <div className="image">
-                        <Link to={`/recept?id=${cocktailIdIconic[0]}`}>
-                            <img src={imageURLIconic[0]} alt="Cocktail" onClick={() => handleClick(cocktailIdIconic[0])} />
-                        </Link>
-                        <div className="cocktail-name-classic-iconic">
-                            <p>{cocktailNameIconic[0]}</p>
-                        </div>
+                        <img src="image9.jpg" alt="Pornstar-martini" />
                     </div>
                     <div className="image">
-                        <Link to={`/recept?id=${cocktailIdIconic[1]}`}>
-                            <img src={imageURLIconic[1]} alt="Cocktail" onClick={() => handleClick(cocktailIdIconic[1])} />
-                        </Link>
-                        <div className="cocktail-name-classic-iconic">
-                            <p>{cocktailNameIconic[1]}</p>
-                        </div>
+                        <img src="image10.jpg" alt="Mojito" />
                     </div>
                 </div>
                 <div className="images-row">
                     <div className="image">
-                        <Link to={`/recept?id=${cocktailIdIconic[2]}`}>
-                            <img src={imageURLIconic[2]} alt="Cocktail" onClick={() => handleClick(cocktailIdIconic[2])} />
-                        </Link>
-                        <div className="cocktail-name-classic-iconic">
-                            <p>{cocktailNameIconic[2]}</p>
-                        </div>
+                        <img src="image11.jpg" alt="Aperol spritz" />
                     </div>
                     <div className="image">
-                        <Link to={`/recept?id=${cocktailIdIconic[3]}`}>
-                            <img src={imageURLIconic[3]} alt="Cocktail" onClick={() => handleClick(cocktailIdIconic[3])} />
-                        </Link>
-                        <div className="cocktail-name-classic-iconic">
-                            <p>{cocktailNameIconic[3]}</p>
-                        </div>
+                        <img src="image12.jpg" alt="Long island" />
                     </div>
                 </div>
             </div>
+
+
+
             <Footerlogin />
         </div>
     );
