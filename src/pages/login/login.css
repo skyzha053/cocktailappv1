@@ -1,20 +1,22 @@
+
 body{
-    background-color:black ;
-}
-.login-page{
-    color: white;
-}
-.font-login{
-    font-weight: bold;
-}
-.login-page a{
-    text-decoration: none;
-    color: white;
+    background-color: black;
 }
 
 .login-page{
-    height: 100vh;
+    color: white;
+    height: 93.5vh;
     background-color: black;
+    overflow: hidden;
+}
+
+.font-login{
+    font-weight: bold;
+}
+
+.login-page a{
+    text-decoration: none;
+    color: white;
 }
 
 .text-part{
@@ -23,21 +25,24 @@ body{
     width: 50%;
     font-weight: bold;
 }
+
 .login-button{
     border-radius: 5px;
     width: 40%;
     font-weight: bold;
 }
 
-text-part-2{
+.text-part-2{
     height: 100%;
     width: 50%;
+    background-color: black;
 }
 
 .logo{
     height: 100%;
     width: 100%;
 }
+
 .password-color{
     color: #6C6C6C;
     margin-top: 10px;
@@ -49,4 +54,44 @@ text-part-2{
 
 .username-color{
     color: #6C6C6C;
+}
+
+@media screen and (max-width: 768px) {
+    html, body {
+        height: auto;
+        margin: 0;
+        padding: 0;
+        background-color: black;
+    }
+
+    .text-part,
+    .text-part-2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .text-part-2 {
+        margin-top: 0;
+    }
+
+    .logo {
+        max-width: 80%;
+        height: 30%;
+    }
+
+    .login-page {
+        height: auto;
+        padding: 2rem;
+    }
+
+    .text-part {
+        height: auto;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .login-button {
+        width: 100%;
+        margin-top: 1rem;
+    }
 }
