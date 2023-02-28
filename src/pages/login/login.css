@@ -67,7 +67,6 @@ body{
     .text-part,
     .text-part-2 {
         width: 100%;
-        text-align: center;
     }
 
     .text-part-2 {
@@ -91,7 +90,7 @@ body{
     }
 
     .login-button {
-        width: 100%;
+        width: 50%;
         margin-top: 1rem;
     }
 }
