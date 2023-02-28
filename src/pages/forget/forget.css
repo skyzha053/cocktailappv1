@@ -1,7 +1,8 @@
+
 .forget-password{
     background-color: black;
     color:  white;
-    height: 100vh;
+    height: 91.5vh;
 }
 
 .container-form{
@@ -69,7 +70,7 @@ img{
     background-color: white;
     height: 2px;
     width: 100%;
-    margin-top: 5vh;
+    margin-top: 10vh;
 }
 
 .link-1{
@@ -78,4 +79,50 @@ img{
     font-weight: bold;
     text-decoration: none;
     margin-top: 15px;
+}
+
+@media screen and (max-width: 768px) {
+    .container-form {
+        width: 80vw;
+        height: 60vh;
+        font-size: 12px;
+
+    }
+
+    img {
+        height: 10vh;
+        width: 20vh;
+    }
+
+    .container-form-1 {
+        width: 60%;
+        height: 10vh;
+        font-size: 12px;
+    }
+
+    .text-forget {
+        width: 80%;
+        height: 10vh;
+        font-size: 12px;
+    }
+
+    .text-forget-1 {
+        font-size: 12px;
+    }
+
+    .button2 {
+        width: 50%;
+        font-size: 12px;
+    }
+
+    .link {
+        font-size: 16px;
+    }
+    .divider{
+        margin-top: 1 vh;
+    }
+    .link-1 {
+        font-size: 16px;
+        margin-top: 10px;
+    }
 }
