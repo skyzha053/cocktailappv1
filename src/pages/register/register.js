@@ -19,15 +19,18 @@ function RegisterForm(props) {
             setErrorMessage("Voer een geldig email adres in.");
             return;
         }
+
         try {
-            const response = await axios.post('https://frontend-educational-backend.herokuapp.com/api/auth/signup', data);
-            console.log(response)
+            const response = await axios.post('https://frontend-educational-backend.herokuapp.com/api/auth/signup', data, {
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+            console.log(response);
             navigate("/");
         } catch (error) {
             console.error(error);
         }
-
-
     }
     return (
         <form onSubmit={handleSubmit(handleFormSubmit)}>
@@ -41,7 +44,7 @@ function RegisterForm(props) {
                             </div>
                             <div className='d-flex flex-row justify-content-between'>
                                 <input id="first-name-input"  className='first-name-input' type='text' placeholder='Voornaam' />
-                                <input id="username-input"  {...register("username")} autoComplete="off" className='username-input' type='text' placeholder='Voer gebruikersnaam in' />
+                                <input id="username-input" {...register("username")} autoComplete="off" className='username-input' type='text' placeholder='Voer gebruikersnaam in' />
                             </div>
                             <div className='register-form-3 d-flex flex-row justify-content-between'>
                                 <label htmlFor="last-name-input" className='last-name-label'>Achternaam</label>
